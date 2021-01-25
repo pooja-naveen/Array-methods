@@ -1,7 +1,7 @@
 const main = document.getElementById("main");
 const addUserBtn = document.getElementById("add-user");
 const doubleBtn = document.getElementById("double");
-const showMillionariesBtn = document.getElementById("show-millionaries");
+const showMillionariesBtn = document.getElementById("show-millionaires");
 const sortBtn = document.getElementById("sort");
 const calculateWealthBtn = document.getElementById("calculate-wealth");
 
@@ -42,12 +42,13 @@ function sortByRichest() {
 }
 
 //filter only millionaires
-// function showMillionaries() {
-//   data = data.filter((user) => user.money > 1000000);
+function showMillionaries() {
+  data = data.filter((user) => user.money > 1000000);
 
-//   //console.log(data);
-//   updateDOM();
-// }
+  //console.log(data);
+  updateDOM();
+}
+
 //calculate the total wealth
 function calculateWealth() {
   const wealth = data.reduce((acc, user) => (acc += user.money), 0);
